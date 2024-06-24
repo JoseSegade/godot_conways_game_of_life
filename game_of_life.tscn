@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy2ylo2a1pai3"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_emra0"]
+
+[node name="GameOfLife" type="Node2D"]
+
+[node name="Menu" type="BoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 170.0
+vertical = true
+
+[node name="PlayBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Play"
+
+[node name="StepBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Step"
+
+[node name="ResetBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Reset"
+
+[node name="RandomBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Random
+"
+
+[node name="World" type="Container" parent="."]
+offset_left = 240.0
+offset_top = 20.0
+offset_right = 1100.0
+offset_bottom = 880.0
+script = ExtResource("1_emra0")
+
+[node name="CellCanvas" type="BoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 730.0
+offset_right = 220.0
+offset_bottom = 880.0
+
+[node name="CellDescription" type="Label" parent="CellCanvas"]
+layout_mode = 2
+text = "Cell:"
